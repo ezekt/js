@@ -1,0 +1,88 @@
+$gray: #707070;
+$ivory: #A193861F;
+$brown: #D0C5BA;
+
+
+
+@mixin pc {
+    @media screen and (min-width: 960px) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media screen and (max-width: 959px) {
+        @content;
+    }
+}
+
+@mixin sp {
+    @media screen and (max-width: 600px) {
+        @content;
+    }
+}
+
+
+html {
+    font-size: 62.5%; 
+}
+body {
+    font-size: 18px;
+}
+.inner {
+    width: 83.3%; 
+    margin: 0 auto;
+    padding-bottom: 70px;
+    @include sp {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+
+.title {
+    display: flex;
+    align-items: center;
+    color: $gray;
+    letter-spacing: 5.4px;
+    &:after {
+        display: inline-block;
+        content: "";
+        border-top: 1px solid;
+        width: 5.5em;
+        margin-left: 2.25rem;
+    }
+}
+
+// マウスホバーanimation
+.hover1 {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  :hover {
+    color: black;
+  }
+}
+.hover1::after {
+  position: absolute;
+  bottom: -8px;
+  left: 3px;
+  content: '';
+  width: 80%;
+  height: 1px;
+  background: #333;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
+.hover1:hover::after {
+  bottom: -4px;
+  opacity: 1;
+  visibility: visible;
+}
+
+// ボタンanimation
+.btn:hover {
+  color: white;
+  background-color: black;
+}

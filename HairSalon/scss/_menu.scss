@@ -1,0 +1,65 @@
+.menu {
+    padding-top: 250px;
+    @include sp {
+        padding-top: 50px;
+    }
+    .title {
+        @include sp {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.menu-most__wrap {
+    display: flex;
+    justify-content: space-between;
+    @include sp {
+        flex-direction: column;
+    }
+}
+.menu__img {
+    width: 100%;
+    margin-top: 10px;
+    img {
+        width: 100%;
+    }
+}
+
+.menu-item {
+    width: 25%; 
+    @include sp {
+        width: 100%;
+    }
+}
+
+.menu-wrap {
+    padding: 40px 10px 0;
+    @include sp {
+        padding: 50px 15px 30px 25px;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 3rem;
+        text-align: center;
+        @include sp {
+            text-align: left;
+        }
+    }
+    &__text {
+        font-family: 游ゴシック;
+        font-size: 1.6rem;
+        margin-top: 34px;
+        @include sp {
+            margin-top: 30px;
+        }
+    }
+    .price {
+        font-weight: bold;
+        font-size: 1.6rem;
+        text-align: right;
+        margin-top: 34px;
+        @include sp {
+            margin-top: 26px;
+        }
+    }
+}

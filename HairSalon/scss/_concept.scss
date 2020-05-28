@@ -1,0 +1,95 @@
+.cp-top {
+    background-color: $ivory;
+    width: 100%;
+    height: 400px;
+    @include tab {
+        height: 170px;
+    }
+    .title {
+        padding-top: 250px;
+        margin-bottom: 10px;
+        @include tab {
+            padding: 60px 0 50px 0;
+        }
+    }
+}
+.cp-img {
+    display: flex;
+    justify-content: space-between;
+    &__first,
+    &__second {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 100%;
+        height: 410px;
+        @include tab {
+            height: 205px;
+        }
+    }
+    &__first {
+        background-image: url(../img/cp-1.png);
+        width: 60%;
+        margin-right: 11px;
+        @include tab {
+            width: 50%;
+        }
+    }
+    &__second {
+        background-image: url(../img/cp-2.png);
+        width: 40%;
+            @include tab {
+                width: 50%;
+            }
+    }
+}
+
+
+.cp-bottom {
+    background-color: $brown;
+    width: 100%;
+    height: 560px;
+    color: white;
+    @include tab {
+        height: auto;
+        padding-bottom: 60px;
+    }
+    &__catch {
+        font-size: 4rem;
+        font-family:  游ゴシック;
+        font-weight: bold;
+        letter-spacing: 15px;
+        @include tab {
+            font-size: 1.8rem;
+            letter-spacing: 7.2px;
+            margin-top: 210px;
+            font-weight: normal;
+        }
+    }
+    &__text {
+        font-size: 1.6rem;
+        width: 40%;
+        line-height: 30px;
+        letter-spacing: 1.6px;
+        @include tab {
+            font-size: 1.6rem;
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+    .inner {
+        position: relative;
+    }
+}
+
+
+.cp-bottom__wrap {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 330px;
+    @include tab {
+        position: static;
+        flex-direction: column;
+    }
+}

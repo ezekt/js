@@ -1,0 +1,54 @@
+.first-v {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    &__wrap {
+        position: absolute;
+        top: 50%;
+        left: 12.5%;
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include sp {
+            height: 15%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            flex-direction: column-reverse;
+        }
+    }
+    @include sp {
+        color: white;
+    }
+}
+.first-v__img {
+    width: 50%; 
+    height: 100vh;
+    background-image: url(../img/first-v.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    @include sp {
+        width: 100%;
+        
+    }
+}
+
+.catch {
+    font-size: 3.8rem;
+    font-family:  游ゴシック;
+    font-weight: bold;
+    z-index: 1;
+    @include sp {
+        font-size: 2.3rem;
+    }
+}
+.catch_sub {
+    font-size: 3.8rem;
+    font-family: Edwardian SCript ITC;
+    z-index: 1;
+    @include sp {
+        font-size: 2.8rem;
+    }
+}
